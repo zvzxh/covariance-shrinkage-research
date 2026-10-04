@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "study_id": "lw2004-section4-design-aligned-subset-v1",
+  "description": "Known-zero-mean Gaussian observations; fixed positive lognormal-shaped spectra calibrated to mean 1 and realized variance alpha2. Independent spectrum and observation streams. Only sample covariance and Eq.14 shrinkage are compared.",
+  "replications": 2000,
+  "observation_seed": 20261005,
+  "spectrum_seed": 200403,
+  "gates": {
+    "analytic_risk_z_limit": 4.0,
+    "paired_improvement_z_limit": 1.96,
+    "spectrum_moment_tolerance": 1e-12,
+    "matrix_relative_tolerance": 1e-10
+  },
+  "scenarios": [
+    {"id": "central", "axis": "central", "p": 20, "n": 40, "alpha2": 0.5},
+    {"id": "ratio_low", "axis": "ratio", "p": 10, "n": 80, "alpha2": 0.5},
+    {"id": "ratio_high", "axis": "ratio", "p": 40, "n": 20, "alpha2": 0.5},
+    {"id": "dispersion_low", "axis": "dispersion", "p": 20, "n": 40, "alpha2": 0.1},
+    {"id": "dispersion_high", "axis": "dispersion", "p": 20, "n": 40, "alpha2": 2.0},
+    {"id": "size_small", "axis": "size", "p": 10, "n": 20, "alpha2": 0.5},
+    {"id": "size_large", "axis": "size", "p": 40, "n": 80, "alpha2": 0.5}
+  ]
+}
