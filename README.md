@@ -12,6 +12,8 @@ covariance estimation loss, not portfolio returns or trading profitability.
 [中文导读](docs/README.zh-CN.md) · [Methodology](docs/methodology.md) ·
 [Acceptance protocol](docs/protocol.md) · [Committed results](results/reference/REPORT.md)
 
+![Recorded simulation: covariance estimation loss and paired Monte Carlo uncertainty](results/reference/loss_comparison.png)
+
 The recorded central run reduced covariance estimation loss from **0.538948**
 to **0.272912**, a PRIAL of **49.362%** (Monte Carlo SE **0.242 percentage points**).
 All seven configured scenarios passed their predeclared gates. The local
