@@ -1,0 +1,12 @@
+{
+  "schema_version": 2,
+  "study_id": "synthetic-risk-workbench-v2",
+  "data_kind": "synthetic",
+  "input_kind": "returns",
+  "start": null,
+  "end": null,
+  "last_n": null,
+  "periods_per_year": 252,
+  "weights": null,
+  "rolling": {"enabled": true, "train_window": 60, "test_window": 20, "include_partial": true}
+}

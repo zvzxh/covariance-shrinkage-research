@@ -1,0 +1,31 @@
+{
+  "version": "2.0.0",
+  "created_utc": "2026-10-04T17:46:19.381254+00:00",
+  "input_filename": "risk_demo_returns.csv",
+  "source_sha256": "c42177d8c41e66dfb09821dc4c1d2c82ccca6163c9e61039f8995e10d08c51c6",
+  "selected_returns_sha256": "c42177d8c41e66dfb09821dc4c1d2c82ccca6163c9e61039f8995e10d08c51c6",
+  "config_sha256": "25631b38f66514bebefb5030b8f1b418bb3fb2124ca9a2be9838affb3d86e5b3",
+  "python": "3.12.14",
+  "numpy": "2.5.3",
+  "matplotlib": "3.11.2",
+  "status": "success",
+  "artifact_sha256": {
+    "selected_returns.csv": "c42177d8c41e66dfb09821dc4c1d2c82ccca6163c9e61039f8995e10d08c51c6",
+    "analysis.json": "f813ba4eb23f3841592f5ed4ea6d54222f7ecd07906d9805c7da1461d03d6963",
+    "config.json": "25631b38f66514bebefb5030b8f1b418bb3fb2124ca9a2be9838affb3d86e5b3",
+    "input_audit.json": "935638d8778432d85ed7e08c849bd5dc808d95428d53c2ff16fbf94b1e44ce96",
+    "risk_diagnostics.png": "d6074e8e30e03e9668ff530b351eb7c62edc53a57f430a91de2dfd83ed4965eb",
+    "covariance_sample_mle.csv": "6e4da1adc15d08a9ad9e4468a762c4a2935365f2f046b4df3f84e3d1e026ebc2",
+    "correlation_sample_mle.csv": "42b1ccc070de933a32308f8f79476135c18952f57b1cfb5ddffd957d2966bb12",
+    "covariance_ledoit_wolf.csv": "2f80a7107b51c5012a2c719518c6b75b8a02f05ea3facaa438b5b1a7f36f1588",
+    "correlation_ledoit_wolf.csv": "c6cbe524f3a418a246418960ca4fff180d7bc936490bd5262d54766233180eb7",
+    "covariance_diagonal_sample_mle.csv": "5159521716492db7a0337d8392cd559dc6ab60aa70ea9e5602411fa28b741c18",
+    "correlation_diagonal_sample_mle.csv": "8fd1a26c94dc8143630ccd283e27bff7f459e105c86d9635a1d2f84be563c970",
+    "risk_contributions.csv": "bf45a3c020ddba8a7a2ed5708e365b292a7f25086a5433e287e3492b208715fd",
+    "eigenspectrum.csv": "bfc24ae5bfc9483ad91341a069fe904cb097b6654c1f3d5f93732714f063b1e0",
+    "risk_summary.csv": "4ee3c786eb8ab89b4cd2fca9e4ace1393b021930b24dbc31430d83752bde9b03",
+    "rolling_validation.csv": "4cead3da6925ed4b631b4fe6675ac0c5b3dfdd0d901f5ac57bac15b64e863885",
+    "rolling_summary.json": "eb25583ee9044eb2774d95acee215f9e5270ef66d446406f20dc274656f86314",
+    "report.html": "d1c4e00fff5547a33db08e422b7436cdba5d478991b6dbc37961cd63554ea076"
+  }
+}

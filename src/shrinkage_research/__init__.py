@@ -3,4 +3,4 @@
 from .estimator import ShrinkageEstimate, ledoit_wolf_identity
 
 __all__ = ["ShrinkageEstimate", "ledoit_wolf_identity"]
-__version__ = "0.1.0"
+__version__ = "2.0.0"

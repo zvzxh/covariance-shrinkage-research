@@ -16,4 +16,8 @@ what they can explain and which parts were AI assisted.
 
 There is no claim of a new statistical estimator, an original publishable result,
 production readiness, investment profitability or completed human validation.
-This is a reproducible first research-engineering artifact with explicit scope.
+V1 is a reproducible research-engineering artifact with explicit scope. V2 adds
+a practical local CSV risk workbench using the same independent estimator,
+auditable statistical definitions and executable tests. It does not add a claim
+that the owner independently designed all software or that generated sample
+data demonstrates real-world forecasting skill.

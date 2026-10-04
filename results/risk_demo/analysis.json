@@ -1,0 +1,516 @@
+{
+  "schema_version": 2,
+  "study_id": "synthetic-risk-workbench-v2",
+  "data_kind": "synthetic",
+  "assets": [
+    "ASSET_A",
+    "ASSET_B",
+    "ASSET_C",
+    "ASSET_D"
+  ],
+  "weights": [
+    0.25,
+    0.25,
+    0.25,
+    0.25
+  ],
+  "observations": 125,
+  "periods_per_year": 252,
+  "training_covariance_ddof": 0,
+  "normalization": "All three covariance estimators center observations and divide by n.",
+  "input_audit": {
+    "source_sha256": "c42177d8c41e66dfb09821dc4c1d2c82ccca6163c9e61039f8995e10d08c51c6",
+    "input_kind": "returns",
+    "source_rows": 125,
+    "asset_count": 4,
+    "source_first_date": "2024-01-02",
+    "source_last_date": "2024-06-24",
+    "conversion": "none; decimal simple returns",
+    "source_price_baseline_date": null,
+    "converted_return_rows": 125,
+    "selection_order": "validate entire source; convert; return-end date filter; trailing last_n",
+    "requested_start": null,
+    "requested_end": null,
+    "requested_last_n": null,
+    "date_filtered_rows": 125,
+    "selected_rows": 125,
+    "selected_first_return_end": "2024-01-02",
+    "selected_last_return_end": "2024-06-24",
+    "first_selected_return_price_baseline_date": null,
+    "price_adjustment_verified": null
+  },
+  "methods": {
+    "sample_mle": {
+      "period_variance": 2.3505731958949465e-05,
+      "annualized_variance": 0.005923444453655265,
+      "annualized_volatility": 0.07696391656909922,
+      "volatility_components": [
+        0.031043242435918987,
+        0.018695979066896885,
+        0.0258709372859637,
+        0.0013537577803196506
+      ],
+      "risk_contribution_shares": [
+        0.4033480079986308,
+        0.24291875856020645,
+        0.33614372084009564,
+        0.01758951260106714
+      ],
+      "correlation": [
+        [
+          1.0,
+          0.622129195854121,
+          0.6044857531554435,
+          -0.1724502424268142
+        ],
+        [
+          0.622129195854121,
+          0.9999999999999999,
+          0.21540281981702064,
+          -0.5015736481596379
+        ],
+        [
+          0.6044857531554435,
+          0.21540281981702064,
+          1.0,
+          0.16524986369690223
+        ],
+        [
+          -0.1724502424268142,
+          -0.5015736481596379,
+          0.16524986369690223,
+          1.0
+        ]
+      ],
+      "eigenvalues": [
+        1.3504622484731956e-05,
+        1.7346014820111534e-05,
+        5.8836037222633806e-05,
+        0.0001352557240692386
+      ],
+      "numerical_rank": 4,
+      "eigenvalue_tolerance": 1.2013121525921254e-17,
+      "condition_number": 10.015513149083278,
+      "singular": false,
+      "warnings": [],
+      "covariance": [
+        [
+          7.624484686565267e-05,
+          4.105390223858496e-05,
+          4.2281557486074134e-05,
+          -7.88446399523943e-06
+        ],
+        [
+          4.105390223858496e-05,
+          5.7113296203765075e-05,
+          1.304006198555575e-05,
+          -1.984752880363421e-05
+        ],
+        [
+          4.2281557486074134e-05,
+          1.304006198555575e-05,
+          6.416812029449309e-05,
+          6.931127461896602e-06
+        ],
+        [
+          -7.88446399523943e-06,
+          -1.984752880363421e-05,
+          6.931127461896602e-06,
+          2.741613523280501e-05
+        ]
+      ],
+      "shrinkage_intensity": null
+    },
+    "ledoit_wolf": {
+      "period_variance": 2.2926803264115238e-05,
+      "annualized_variance": 0.0057775544225570396,
+      "annualized_volatility": 0.07601022577625355,
+      "volatility_components": [
+        0.03022055019191982,
+        0.018484536528216976,
+        0.02530429935167201,
+        0.00200083970444476
+      ],
+      "risk_contribution_shares": [
+        0.3975853233337068,
+        0.24318486544992943,
+        0.3329065147912948,
+        0.026323296425069226
+      ],
+      "correlation": [
+        [
+          1.0,
+          0.5890343782586759,
+          0.5742392390440769,
+          -0.15818409778375286
+        ],
+        [
+          0.5890343782586759,
+          1.0,
+          0.2030682736623193,
+          -0.45658077457499235
+        ],
+        [
+          0.5742392390440769,
+          0.2030682736623193,
+          0.9999999999999998,
+          0.15092832601984343
+        ],
+        [
+          -0.15818409778375286,
+          -0.45658077457499235,
+          0.15092832601984343,
+          1.0
+        ]
+      ],
+      "eigenvalues": [
+        1.612329811235303e-05,
+        1.9729279016674623e-05,
+        5.8676675023436966e-05,
+        0.00013041314644425122
+      ],
+      "numerical_rank": 4,
+      "eigenvalue_tolerance": 1.1583014231697605e-17,
+      "condition_number": 8.088490675759065,
+      "singular": false,
+      "warnings": [],
+      "covariance": [
+        [
+          7.501862337417539e-05,
+          3.853800252496061e-05,
+          3.969042357260107e-05,
+          -7.401281651392444e-06
+        ],
+        [
+          3.853800252496061e-05,
+          5.705950846642651e-05,
+          1.2240929956048723e-05,
+          -1.8631215875741987e-05
+        ],
+        [
+          3.969042357260107e-05,
+          1.2240929956048723e-05,
+          6.368199290265875e-05,
+          6.506368288088022e-06
+        ],
+        [
+          -7.401281651392444e-06,
+          -1.8631215875741987e-05,
+          6.506368288088022e-06,
+          2.9182273853455208e-05
+        ]
+      ],
+      "shrinkage_intensity": 0.061282839789581676
+    },
+    "diagonal_sample_mle": {
+      "period_variance": 1.4058899912294741e-05,
+      "annualized_variance": 0.003542842777898275,
+      "annualized_volatility": 0.059521784061789304,
+      "volatility_components": [
+        0.020175072993232627,
+        0.015112692426616399,
+        0.016979462403027386,
+        0.007254556238912881
+      ],
+      "risk_contribution_shares": [
+        0.3389527600901373,
+        0.25390187247962825,
+        0.28526467528932065,
+        0.12188069214091363
+      ],
+      "correlation": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.9999999999999999,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "eigenvalues": [
+        2.741613523280501e-05,
+        5.7113296203765075e-05,
+        6.416812029449309e-05,
+        7.624484686565267e-05
+      ],
+      "numerical_rank": 4,
+      "eigenvalue_tolerance": 6.771902759941344e-18,
+      "condition_number": 2.781020965143959,
+      "singular": false,
+      "warnings": [],
+      "covariance": [
+        [
+          7.624484686565267e-05,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          5.7113296203765075e-05,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          6.416812029449309e-05,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          2.741613523280501e-05
+        ]
+      ],
+      "shrinkage_intensity": null
+    }
+  },
+  "rolling_rows": [
+    {
+      "fold": 0,
+      "method": "sample_mle",
+      "train_start": "2024-01-02",
+      "train_end": "2024-03-25",
+      "test_start": "2024-03-26",
+      "test_end": "2024-04-22",
+      "training_rows": 60,
+      "test_rows": 20,
+      "partial_test": false,
+      "predicted_period_variance": 2.6237125715986354e-05,
+      "realized_period_variance_ddof1": 1.791331152869813e-05,
+      "variance_error": 8.323814187288226e-06,
+      "squared_variance_error": 6.928588262450075e-11,
+      "prediction_to_realized_ratio": 1.4646719940058548,
+      "training_shrinkage": null
+    },
+    {
+      "fold": 0,
+      "method": "ledoit_wolf",
+      "train_start": "2024-01-02",
+      "train_end": "2024-03-25",
+      "test_start": "2024-03-26",
+      "test_end": "2024-04-22",
+      "training_rows": 60,
+      "test_rows": 20,
+      "partial_test": false,
+      "predicted_period_variance": 2.5155559095656662e-05,
+      "realized_period_variance_ddof1": 1.791331152869813e-05,
+      "variance_error": 7.242247566958534e-06,
+      "squared_variance_error": 5.24501498211168e-11,
+      "prediction_to_realized_ratio": 1.4042941784022485,
+      "training_shrinkage": 0.10710867675037834
+    },
+    {
+      "fold": 0,
+      "method": "diagonal_sample_mle",
+      "train_start": "2024-01-02",
+      "train_end": "2024-03-25",
+      "test_start": "2024-03-26",
+      "test_end": "2024-04-22",
+      "training_rows": 60,
+      "test_rows": 20,
+      "partial_test": false,
+      "predicted_period_variance": 1.613928254264255e-05,
+      "realized_period_variance_ddof1": 1.791331152869813e-05,
+      "variance_error": -1.7740289860555774e-06,
+      "squared_variance_error": 3.1471788433653803e-12,
+      "prediction_to_realized_ratio": 0.900965883208502,
+      "training_shrinkage": null
+    },
+    {
+      "fold": 1,
+      "method": "sample_mle",
+      "train_start": "2024-01-30",
+      "train_end": "2024-04-22",
+      "test_start": "2024-04-23",
+      "test_end": "2024-05-20",
+      "training_rows": 60,
+      "test_rows": 20,
+      "partial_test": false,
+      "predicted_period_variance": 2.187003915372058e-05,
+      "realized_period_variance_ddof1": 2.2219289968270622e-05,
+      "variance_error": -3.492508145500436e-07,
+      "squared_variance_error": 1.2197613146386894e-13,
+      "prediction_to_realized_ratio": 0.9842816392851087,
+      "training_shrinkage": null
+    },
+    {
+      "fold": 1,
+      "method": "ledoit_wolf",
+      "train_start": "2024-01-30",
+      "train_end": "2024-04-22",
+      "test_start": "2024-04-23",
+      "test_end": "2024-05-20",
+      "training_rows": 60,
+      "test_rows": 20,
+      "partial_test": false,
+      "predicted_period_variance": 2.0912161072740065e-05,
+      "realized_period_variance_ddof1": 2.2219289968270622e-05,
+      "variance_error": -1.307128895530557e-06,
+      "squared_variance_error": 1.7085859495309336e-12,
+      "prediction_to_realized_ratio": 0.9411714371882652,
+      "training_shrinkage": 0.1281468685772228
+    },
+    {
+      "fold": 1,
+      "method": "diagonal_sample_mle",
+      "train_start": "2024-01-30",
+      "train_end": "2024-04-22",
+      "test_start": "2024-04-23",
+      "test_end": "2024-05-20",
+      "training_rows": 60,
+      "test_rows": 20,
+      "partial_test": false,
+      "predicted_period_variance": 1.439519336454478e-05,
+      "realized_period_variance_ddof1": 2.2219289968270622e-05,
+      "variance_error": -7.824096603725843e-06,
+      "squared_variance_error": 6.121648766443427e-11,
+      "prediction_to_realized_ratio": 0.6478691886690018,
+      "training_shrinkage": null
+    },
+    {
+      "fold": 2,
+      "method": "sample_mle",
+      "train_start": "2024-02-27",
+      "train_end": "2024-05-20",
+      "test_start": "2024-05-21",
+      "test_end": "2024-06-17",
+      "training_rows": 60,
+      "test_rows": 20,
+      "partial_test": false,
+      "predicted_period_variance": 1.923559744775885e-05,
+      "realized_period_variance_ddof1": 2.4429559942368777e-05,
+      "variance_error": -5.193962494609928e-06,
+      "squared_variance_error": 2.697724639541459e-11,
+      "prediction_to_realized_ratio": 0.7873902556221689,
+      "training_shrinkage": null
+    },
+    {
+      "fold": 2,
+      "method": "ledoit_wolf",
+      "train_start": "2024-02-27",
+      "train_end": "2024-05-20",
+      "test_start": "2024-05-21",
+      "test_end": "2024-06-17",
+      "training_rows": 60,
+      "test_rows": 20,
+      "partial_test": false,
+      "predicted_period_variance": 1.8088063599910014e-05,
+      "realized_period_variance_ddof1": 2.4429559942368777e-05,
+      "variance_error": -6.341496342458764e-06,
+      "squared_variance_error": 4.021457586141788e-11,
+      "prediction_to_realized_ratio": 0.7404170866188812,
+      "training_shrinkage": 0.16047975422946223
+    },
+    {
+      "fold": 2,
+      "method": "diagonal_sample_mle",
+      "train_start": "2024-02-27",
+      "train_end": "2024-05-20",
+      "test_start": "2024-05-21",
+      "test_end": "2024-06-17",
+      "training_rows": 60,
+      "test_rows": 20,
+      "partial_test": false,
+      "predicted_period_variance": 1.2084951851629436e-05,
+      "realized_period_variance_ddof1": 2.4429559942368777e-05,
+      "variance_error": -1.2344608090739342e-05,
+      "squared_variance_error": 1.5238934891394722e-10,
+      "prediction_to_realized_ratio": 0.494685613663888,
+      "training_shrinkage": null
+    },
+    {
+      "fold": 3,
+      "method": "sample_mle",
+      "train_start": "2024-03-26",
+      "train_end": "2024-06-17",
+      "test_start": "2024-06-18",
+      "test_end": "2024-06-24",
+      "training_rows": 60,
+      "test_rows": 5,
+      "partial_test": true,
+      "predicted_period_variance": 2.054723198680725e-05,
+      "realized_period_variance_ddof1": 1.8181628395370062e-05,
+      "variance_error": 2.365603591437189e-06,
+      "squared_variance_error": 5.596080351820528e-12,
+      "prediction_to_realized_ratio": 1.1301095556457192,
+      "training_shrinkage": null
+    },
+    {
+      "fold": 3,
+      "method": "ledoit_wolf",
+      "train_start": "2024-03-26",
+      "train_end": "2024-06-17",
+      "test_start": "2024-06-18",
+      "test_end": "2024-06-24",
+      "training_rows": 60,
+      "test_rows": 5,
+      "partial_test": true,
+      "predicted_period_variance": 1.955120786792936e-05,
+      "realized_period_variance_ddof1": 1.8181628395370062e-05,
+      "variance_error": 1.3695794725592989e-06,
+      "squared_variance_error": 1.8757479316558074e-12,
+      "prediction_to_realized_ratio": 1.07532765728003,
+      "training_shrinkage": 0.1181341882285309
+    },
+    {
+      "fold": 3,
+      "method": "diagonal_sample_mle",
+      "train_start": "2024-03-26",
+      "train_end": "2024-06-17",
+      "test_start": "2024-06-18",
+      "test_end": "2024-06-24",
+      "training_rows": 60,
+      "test_rows": 5,
+      "partial_test": true,
+      "predicted_period_variance": 1.2115937593425735e-05,
+      "realized_period_variance_ddof1": 1.8181628395370062e-05,
+      "variance_error": -6.065690801944328e-06,
+      "squared_variance_error": 3.679260490479202e-11,
+      "prediction_to_realized_ratio": 0.6663835235193262,
+      "training_shrinkage": null
+    }
+  ],
+  "rolling_summary": {
+    "fixed_weights": true,
+    "realized_variance_ddof": 1,
+    "interpretation": "Noisy sample-variance proxy of fixed-weight period returns, not true covariance or a drifted-holdings backtest.",
+    "skipped_test_blocks": [],
+    "methods": {
+      "sample_mle": {
+        "folds": 4,
+        "mean_squared_variance_error": 2.549529637579993e-11,
+        "mean_absolute_variance_error": 4.058157771971347e-06
+      },
+      "ledoit_wolf": {
+        "folds": 4,
+        "mean_squared_variance_error": 2.4062264890930356e-11,
+        "mean_absolute_variance_error": 4.065113069376788e-06
+      },
+      "diagonal_sample_mle": {
+        "folds": 4,
+        "mean_squared_variance_error": 6.338640508163473e-11,
+        "mean_absolute_variance_error": 7.002106120616273e-06
+      }
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "source_sha256": "c42177d8c41e66dfb09821dc4c1d2c82ccca6163c9e61039f8995e10d08c51c6",
+  "input_kind": "returns",
+  "source_rows": 125,
+  "asset_count": 4,
+  "source_first_date": "2024-01-02",
+  "source_last_date": "2024-06-24",
+  "conversion": "none; decimal simple returns",
+  "source_price_baseline_date": null,
+  "converted_return_rows": 125,
+  "selection_order": "validate entire source; convert; return-end date filter; trailing last_n",
+  "requested_start": null,
+  "requested_end": null,
+  "requested_last_n": null,
+  "date_filtered_rows": 125,
+  "selected_rows": 125,
+  "selected_first_return_end": "2024-01-02",
+  "selected_last_return_end": "2024-06-24",
+  "first_selected_return_price_baseline_date": null,
+  "price_adjustment_verified": null
+}

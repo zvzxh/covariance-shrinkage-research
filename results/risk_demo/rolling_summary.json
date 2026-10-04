@@ -1,0 +1,23 @@
+{
+  "fixed_weights": true,
+  "realized_variance_ddof": 1,
+  "interpretation": "Noisy sample-variance proxy of fixed-weight period returns, not true covariance or a drifted-holdings backtest.",
+  "skipped_test_blocks": [],
+  "methods": {
+    "sample_mle": {
+      "folds": 4,
+      "mean_squared_variance_error": 2.549529637579993e-11,
+      "mean_absolute_variance_error": 4.058157771971347e-06
+    },
+    "ledoit_wolf": {
+      "folds": 4,
+      "mean_squared_variance_error": 2.4062264890930356e-11,
+      "mean_absolute_variance_error": 4.065113069376788e-06
+    },
+    "diagonal_sample_mle": {
+      "folds": 4,
+      "mean_squared_variance_error": 6.338640508163473e-11,
+      "mean_absolute_variance_error": 7.002106120616273e-06
+    }
+  }
+}

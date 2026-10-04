@@ -41,3 +41,22 @@ jobs:
           name: simulation-results
           path: work/ci-run/
           if-no-files-found: warn
+
+  risk-ui:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python -m pip install -e '.[app,test]'
+      - name: Exercise the browser workflow with Streamlit installed
+        run: python -m pytest tests/test_risk_app.py
+      - name: Run the V2 synthetic input through the real-input workflow
+        run: shrinkage-risk --input data/risk_demo_returns.csv --config configs/risk_demo.json --out work/ci-risk
+      - name: Retain V2 report artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: risk-analysis
+          path: work/ci-risk/
