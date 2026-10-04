@@ -1,0 +1,25 @@
+{
+  "started_utc": "2026-10-04T16:56:37.879708+00:00",
+  "environment": {
+    "python": "3.12.14",
+    "platform": "macOS-26.7.1-arm64-arm-64bit",
+    "packages": {
+      "numpy": "2.5.3",
+      "matplotlib": "3.11.2",
+      "scikit-learn": "1.9.1",
+      "pytest": "9.1.1"
+    },
+    "project_version": "0.1.0"
+  },
+  "command": [
+    "shrinkage-research",
+    "--config",
+    "configs/paper_subset.json",
+    "--out",
+    "results/reference"
+  ],
+  "config_source_sha256": "aa68cf5da79e964be1b5181bdffebfe69cd4e97fd7302edb7d7d52d0e90b357e",
+  "effective_config_sha256": "ddf876477646f0739e2623c85d04361f55c6fdebb5b8ffea35b8318441609b97",
+  "status": "pass",
+  "elapsed_seconds": 1.1205463340156712
+}
